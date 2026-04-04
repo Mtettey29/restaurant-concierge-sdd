@@ -87,4 +87,4 @@ This project was built using the SDD workflow. You can find the full history of 
 - `specs/004-cloud-run-deployment/`: Cloud infrastructure.
 
 ---
-Built with ❤️ by Mtettey29 using Antigravity.
+*Built with ⚡ at the Google Developer Groups Accra Build with AI Event. ©2026* 
