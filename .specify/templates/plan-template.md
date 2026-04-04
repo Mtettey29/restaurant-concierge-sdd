@@ -31,11 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
+- [ ] **External Tools**: Does every database operation use an MCP Toolbox definition in `tools.yaml`? (No raw SQL/ORM)
+- [ ] **Standard State**: Does all session state use ADK `ToolContext`? (No custom/external stores)
+- [ ] **Simplicity**: Does the design strictly follow existing file and naming conventions?
 - [ ] **Spec-Driven**: Does this feature begin with a clear, approved specification?
-- [ ] **AI-First**: Does the design rely on ADK endpoints rather than duplicating logic in the UI?
-- [ ] **Separation**: Is the API contract between frontend and backend clearly defined?
 - [ ] **Verification**: Are there independent validation steps planned for ADK components before UI integration?
-- [ ] **Observability**: Are we using structured logging or ADK tracing for new agent capabilities?
 
 ## Project Structure
 

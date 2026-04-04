@@ -46,6 +46,19 @@ def create_schema(cursor):
         );
     """)
 
+    print("Creating reservations table...")
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS reservations (
+            id SERIAL PRIMARY KEY,
+            guest_name VARCHAR(255) NOT NULL,
+            party_size INTEGER NOT NULL,
+            reservation_date DATE NOT NULL,
+            reservation_time TIME NOT NULL,
+            special_requests TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+    """)
+
 
 def seed_menu(cursor):
     """Insert seed menu data."""

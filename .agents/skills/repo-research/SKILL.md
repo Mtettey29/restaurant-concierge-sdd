@@ -1,4 +1,7 @@
-# TODO(codelab): Add YAML frontmatter above this line to activate the skill.
+---
+name: repo-research
+description: Analyze a repository's structure, technologies, and patterns to create or update a project context document. Use when asked to research, analyze, or understand a codebase.
+---
 # Antigravity requires ---/name/description/--- to recognize a skill file.
 
 # Repository Research Skill

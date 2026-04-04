@@ -61,3 +61,46 @@ tools:
       - name: category
         type: string
         description: The menu category (e.g., appetizers, entrees, desserts, drinks).
+
+  create_reservation:
+    kind: postgres-sql
+    source: restaurant-db
+    description: >
+      Create a new restaurant table reservation.
+      Requires guest_name, party_size, reservation_date (YYYY-MM-DD), and reservation_time (HH:MM).
+      Optionally accepts special_requests.
+    statement: |
+      INSERT INTO reservations (guest_name, party_size, reservation_date, reservation_time, special_requests)
+      VALUES ($1, $2, $3, $4, $5)
+      RETURNING id, guest_name, party_size, reservation_date, reservation_time;
+    parameters:
+      - name: guest_name
+        type: string
+        description: Name of the guest making the reservation.
+      - name: party_size
+        type: integer
+        description: Number of people in the party.
+      - name: reservation_date
+        type: string
+        description: Date of the reservation (YYYY-MM-DD).
+      - name: reservation_time
+        type: string
+        description: Time of the reservation (HH:MM).
+      - name: special_requests
+        type: string
+        description: Any special requests (e.g., "window seat", "birthday").
+
+  list_reservations:
+    kind: postgres-sql
+    source: restaurant-db
+    description: >
+      Retrieve all existing reservations for a specific guest name.
+    statement: |
+      SELECT id, guest_name, party_size, reservation_date, reservation_time, special_requests
+      FROM reservations
+      WHERE guest_name ILIKE $1
+      ORDER BY reservation_date, reservation_time;
+    parameters:
+      - name: guest_name
+        type: string
+        description: Name of the guest to check reservations for.

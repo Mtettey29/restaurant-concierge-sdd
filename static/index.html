@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Kitchen Concierge</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white h-screen flex flex-col font-sans text-slate-900">
+
+    <!-- Minimal Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 px-6 py-4 flex items-center justify-between border-b border-slate-100">
+        <div class="flex items-center gap-2">
+            <div class="bg-emerald-600 p-1.5 rounded-lg">
+                <i data-lucide="chef-hat" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="font-semibold text-slate-800 tracking-tight">The Cloud Kitchen</span>
+        </div>
+        <button id="reset-session" class="text-slate-400 hover:text-emerald-600 p-2 rounded-full hover:bg-emerald-50 transition-all" title="New Chat">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+        </button>
+    </header>
+
+    <!-- Centered Chat Container -->
+    <main id="chat-container" class="flex-1 overflow-y-auto pt-24 pb-32 px-4 scroll-smooth">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <!-- Messages will appear here -->
+            
+            <!-- Welcome Message (Initial) -->
+            <div class="flex gap-4 group">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-1">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-emerald-600"></i>
+                </div>
+                <div class="flex-1 space-y-2">
+                    <p class="text-slate-700 leading-relaxed pt-1">
+                        Welcome to <strong>The Cloud Kitchen</strong>! 🥂 <br><br>
+                        I'm your digital concierge. I can help you explore our menu or book a table. How can I assist you today?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Pill Input Area -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white to-transparent pointer-events-none">
+        <div class="max-w-3xl mx-auto pointer-events-auto">
+            <div id="typing-indicator" class="hidden mb-2 ml-12">
+                <div class="flex items-center gap-2 text-slate-400 text-xs">
+                    <span class="flex gap-1">
+                        <span class="w-1 h-1 bg-emerald-400 rounded-full animate-pulse"></span>
+                        <span class="w-1 h-1 bg-emerald-400 rounded-full animate-pulse delay-75"></span>
+                        <span class="w-1 h-1 bg-emerald-400 rounded-full animate-pulse delay-150"></span>
+                    </span>
+                    <span>Thinking...</span>
+                </div>
+            </div>
+            
+            <form id="chat-form" class="relative group">
+                <input 
+                    type="text" 
+                    id="message-input" 
+                    placeholder="Ask anything..." 
+                    class="w-full bg-slate-100/50 border border-slate-200 rounded-3xl pl-6 pr-14 py-4 text-[15px] focus:outline-none focus:ring-4 focus:ring-emerald-500/5 focus:bg-white focus:border-emerald-500/30 transition-all shadow-sm group-hover:shadow-md"
+                    autocomplete="off"
+                >
+                <button 
+                    type="submit" 
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-emerald-600 text-white p-2.5 rounded-full hover:bg-emerald-700 active:scale-95 transition-all disabled:opacity-50 disabled:grayscale"
+                >
+                    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+                </button>
+            </form>
+            <p class="text-[10px] text-center text-slate-400 mt-3 font-medium uppercase tracking-widest">
+                Restaurant Concierge AI
+            </p>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

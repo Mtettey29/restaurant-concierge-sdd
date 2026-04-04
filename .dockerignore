@@ -1,6 +1,8 @@
 # Environment
 .env
-setup_verify_trial_project.sh
+.agents/
+.specify/
+specs/
 
 # Python
 __pycache__/
@@ -12,6 +14,10 @@ dist/
 build/
 *.egg-info/
 
+# Git
+.git
+.gitignore
+
 # IDE
 .vscode/
 .idea/
@@ -19,6 +25,5 @@ build/
 # OS
 .DS_Store
 
-# Toolbox binary
+# Local binary
 toolbox
-

@@ -1,4 +1,7 @@
-# TODO(codelab): Add YAML frontmatter above this line to activate the skill.
+---
+name: adk-agent-development
+description: Comprehensive guide for building, developing, and deploying AI agents using Google's Agent Development Kit (ADK) with Gemini models, covering agent creation, tools, state management, persistence, deployment, and database integration via MCP Toolbox.
+---
 # Antigravity requires ---/name/description/--- to recognize a skill file.
 
 # ADK Agent Development Skill

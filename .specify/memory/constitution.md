@@ -1,50 +1,38 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+  Sync Impact Report:
+  - Version change: N/A → 1.0.0
+  - List of modified principles: (Initial principles added)
+  - Added sections: Core Principles, Development Constraints, Workflow Standards, Governance
+  - Templates requiring updates: ✅ .specify/templates/plan-template.md (updated)
+  - Follow-up TODOs: None
+-->
+
+# restaurant-concierge Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. External Tool Definitions
+All database operations MUST go through MCP Toolbox tool definitions in `tools.yaml`. No raw SQL in Python code, and no ORM usage allowed. This ensures a clean separation between the agent's logic and the data persistence layer.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Standard Session State
+Session state MUST use ADK `ToolContext`. No custom state management or external state stores are permitted. This ensures consistency and leverages the built-in capabilities of the ADK framework.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Convention Over Configuration
+Follow existing file and naming conventions exactly. Keep the architecture simple and avoid unnecessary abstractions. Use the established project structure (`restaurant_concierge/`, `scripts/`, etc.) and naming patterns.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## Development Constraints
+- **Environment**: All development must be compatible with the `uv` package manager and Python 3.12+.
+- **Tools**: Use `tools.yaml` for defining SQL tools that are then loaded via `ToolboxSyncClient`.
+- **Server**: The application is served using FastAPI via `get_fast_api_app`.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Workflow Standards
+- **Spec-Driven**: All features must follow the Research -> Strategy -> Execution lifecycle.
+- **Surgical Edits**: Use targeted `replace` calls for file modifications to maintain stability.
+- **Validation**: Every change must be verified against the project's runtime behavior.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- The constitution is the source of truth for all architectural decisions.
+- Amendments require a version bump (Major/Minor/Patch).
+- All feature implementations must pass a "Constitution Check" during the planning phase.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-04-04 | **Last Amended**: 2026-04-04
