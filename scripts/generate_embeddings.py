@@ -20,7 +20,7 @@ def get_connection():
         instance_connection,
         "pg8000",
         user="postgres",
-        password=os.environ.get("DB_PASSWORD", "codelabpassword"),
+        password=os.environ.get("DB_PASSWORD"),
         db="restaurant_db",
     )
     return conn
