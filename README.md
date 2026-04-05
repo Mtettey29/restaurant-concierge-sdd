@@ -11,12 +11,9 @@ This application provides a seamless guest experience for "The Cloud Kitchen," a
 
 ## 📱 App Preview
 
-> **Interface Design**: The web interface features a clean, airy, and centered layout inspired by the modern Gemini Chat experience. It includes a floating pill-shaped input bar, smooth fade-in animations, and a responsive design that works perfectly on mobile and desktop.
+> **Interface Design**: The web interface features a clean, airy, and centered layout inspired by the modern Gemini Chat experience. It includes a floating pill-shaped input bar, smooth fade-in animations, and a responsive design.
 
-| Desktop View | Mobile View |
-| :---: | :---: |
-| ![App Screenshot - Desktop](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/image.png) | ![App Screenshot - Mobile](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/image.png) |
-*(Note: Replace these placeholder links with actual screenshots after uploading them to your repository.)*
+![App Screenshot](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/image.png)
 
 ## ✨ Features
 
