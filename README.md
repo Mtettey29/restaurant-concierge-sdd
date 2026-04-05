@@ -7,6 +7,16 @@ This application provides a seamless guest experience for "The Cloud Kitchen," a
 ![Gemini-inspired UI](https://img.shields.io/badge/UI-Gemini--Inspired-emerald)
 ![ADK](https://img.shields.io/badge/Powered%20by-Google%20ADK-blue)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-red)](https://restaurant-concierge-efqpnltyva-uc.a.run.app)
+
+## 📱 App Preview
+
+> **Interface Design**: The web interface features a clean, airy, and centered layout inspired by the modern Gemini Chat experience. It includes a floating pill-shaped input bar, smooth fade-in animations, and a responsive design that works perfectly on mobile and desktop.
+
+| Desktop View | Mobile View |
+| :---: | :---: |
+| ![App Screenshot - Desktop](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/static/screenshot-desktop.png) | ![App Screenshot - Mobile](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/static/screenshot-mobile.png) |
+*(Note: Replace these placeholder links with actual screenshots after uploading them to your repository.)*
 
 ## ✨ Features
 
