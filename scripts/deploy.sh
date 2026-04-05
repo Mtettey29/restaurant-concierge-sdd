@@ -34,7 +34,7 @@ gcloud run deploy "$SERVICE_NAME" \
     --project "$PROJECT_ID" \
     --region "$REGION" \
     --allow-unauthenticated \
-    --set-env-vars "GOOGLE_CLOUD_PROJECT=$PROJECT_ID,REGION=$REGION,DB_PASSWORD=$DB_PASSWORD,TOOLBOX_URL=http://127.0.0.1:5000" \
+    --set-env-vars "GOOGLE_CLOUD_PROJECT=$PROJECT_ID,REGION=$REGION,DB_PASSWORD=$DB_PASSWORD,TOOLBOX_URL=http://127.0.0.1:5000,VERTEXAI_PROJECT=$PROJECT_ID,VERTEXAI_LOCATION=us-central1,GOOGLE_CLOUD_LOCATION=us-central1,GOOGLE_GENAI_USE_VERTEXAI=True" \
     --quiet
 
 echo "Deployment complete!"
