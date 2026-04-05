@@ -15,6 +15,8 @@ This application provides a seamless guest experience for "The Cloud Kitchen," a
 
 ![App Screenshot](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/image.png)
 
+**Live Demo:** [https://restaurant-concierge-efqpnltyva-uc.a.run.app/](https://restaurant-concierge-efqpnltyva-uc.a.run.app/)
+
 ## ✨ Features
 
 - **🧠 Intelligent Concierge**: Powered by Gemini 2.5 Flash for natural, helpful conversations.
