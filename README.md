@@ -15,7 +15,7 @@ This application provides a seamless guest experience for "The Cloud Kitchen," a
 
 | Desktop View | Mobile View |
 | :---: | :---: |
-| ![App Screenshot - Desktop](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/static/image.png) | ![App Screenshot - Mobile](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/static/image.png) |
+| ![App Screenshot - Desktop](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/image.png) | ![App Screenshot - Mobile](https://raw.githubusercontent.com/Mtettey29/restaurant-concierge-sdd/main/image.png) |
 *(Note: Replace these placeholder links with actual screenshots after uploading them to your repository.)*
 
 ## ✨ Features
